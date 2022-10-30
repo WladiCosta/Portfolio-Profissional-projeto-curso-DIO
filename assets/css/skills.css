@@ -1,0 +1,44 @@
+.skills{
+  display: flex;
+  flex-direction: column;
+}
+
+.skills .hard-skills ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills .hard-skills ul li img{
+  max-width: 50px;
+  margin: 0 .5rem;
+}
+
+.skills .soft-skills ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.skills .soft-skills ul li{
+  margin-left: 2rem;
+  padding: .5rem;
+}
+
+@media (min-width: 768px){
+  .skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+
+}

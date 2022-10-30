@@ -1,0 +1,94 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .photo{
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+}
+
+.header .title{
+  font-size: 1.45rem;
+  font-family:'Neue Machina';
+  text-align: center;
+}
+
+.information{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width:100%;
+}
+
+.information p{
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: .5rem;
+}
+
+.information p::before{
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url('../img/icons/job.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: .5rem;
+}
+
+.information .job::before{
+  background-image: url('../img/icons/job.svg');
+}
+
+.information .location::before{
+  background-image: url('../img/icons/location.svg');
+}
+
+.information .email a{
+  text-decoration: none;
+  color: #34c6eb;
+  cursor: pointer;
+  
+}
+
+.information .email::before{
+  background-image: url('../img/icons/email.svg');
+}
+
+.information .phone a{
+  text-decoration: none;
+  color: #34c6eb;
+  cursor: pointer;
+}
+
+.information .phone::before{
+  background-image: url('../img/icons/phone.svg');
+}
+
+
+@media (min-width: 768px){
+  .header{
+    display: grid;
+    grid-template-areas: 
+    "photo title"
+    "photo information"
+  }
+  .header .photo{
+    grid-area: photo;
+    margin: 0 auto;
+  }
+  .header .title{
+    grid-area: title;
+    text-align: start;
+    
+  }
+  .information{
+    grid-area: information;
+  }
+}
